@@ -12,15 +12,6 @@ class AppFull extends StatefulWidget {
 }
 
 class App extends State<AppFull> {
-  var nome = 'Arthur';
-  int contador = 0;
-  void click() {
-    setState(() {
-      nome = 'Arthur $contador';
-      contador++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -69,13 +60,47 @@ class App extends State<AppFull> {
             ],
           ),
         ),
-        body: Center(
-          child: Column(
-            children: [
-              Text('Ola $nome'),
-              ElevatedButton(onPressed: click, child: Text('Click')),
-            ],
-          ),
+        body: GridView.count(
+          crossAxisCount: 2,
+          mainAxisSpacing: 15,
+          crossAxisSpacing: 15,
+          padding: const EdgeInsets.all(
+            16,
+          ), // Responsavel para dar margem nas bordas
+          childAspectRatio: 0.8, //Aumenta a altura, para evitar estouro de card
+          children: List.generate(1, (index) {
+            return Card(
+              elevation: 2,
+              clipBehavior: Clip
+                  .antiAlias, // Delimita para evitar a ultrapassar a borda !
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Column(
+                crossAxisAlignment:
+                    CrossAxisAlignment.start, //Alinha para a esquerda
+                children: [
+                  Expanded(
+                    child: Image.network(
+                      'https://images.unsplash.com/photo-1530216088905-4007f55c6170?q=80&w=764&auto=format&fit=crop&idtxlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                      width: double.infinity, // Ocupa largura total do card
+                      fit: BoxFit.cover, // Preenche bem a area da imagem
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.all(7.5),
+                    child: Text(
+                      'Concha',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            );
+          }),
         ),
       ),
     );
