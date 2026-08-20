@@ -25,7 +25,7 @@ class App extends State<AppFull> {
         backgroundColor: const Color(0xFFF8FAFC),
         appBar: const SeaShopAppBar(),
         drawer: const SeaShopDrawer(),
-        body: const SeaShopBody(),
+        body: SeaShopBody(),
       ),
     );
   }
