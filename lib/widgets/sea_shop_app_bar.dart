@@ -20,7 +20,8 @@ class SeaShopAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
         ], // Children
       ),
-      centerTitle: true,
+      centerTitle: false,
+      titleSpacing: 0.0,
       backgroundColor: Colors.blue.shade200,
     );
   }
