@@ -22,6 +22,18 @@ class SeaShopBody extends StatelessWidget {
       'image':
           'https://images.unsplash.com/photo-1582967788606-a171c1080cb0?q=80&w=800&auto=format&fit=crop',
     },
+    {
+      'title': 'Estrela do Mar',
+      'price': 'R\$ 23,00',
+      'image':
+          'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZXN0cmVsYSUyMGRvJTIwbWFyfGVufDB8fDB8fHww',
+    },
+    {
+      'title': 'Pepino do mar',
+      'price': 'R\$ 12,00',
+      'image':
+          'https://media.istockphoto.com/id/2229721285/pt/foto/tubular-sea-cucumber-underwater-photography.webp?a=1&b=1&s=612x612&w=0&k=20&c=z3CScAxD-2R2UcLEVRRDEw1P8Dqia4_cBaavwqKj590=',
+    },
   ];
 
   @override
