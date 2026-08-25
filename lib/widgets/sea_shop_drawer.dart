@@ -26,8 +26,19 @@ class _SeaShopDrawerState extends State<SeaShopDrawer> {
               ),
             ),
           ),
-          ListTile(title: const Text('Your Profile'), onTap: () {}),
-          ListTile(title: const Text('Item 2')),
+          ListTile(
+            title: const Text(
+              'Seu perfil',
+              style: const TextStyle(fontFamily: 'serif'),
+            ),
+            onTap: () {},
+          ),
+          ListTile(
+            title: const Text(
+              'Item 2',
+              style: const TextStyle(fontFamily: 'serif'),
+            ),
+          ),
         ],
       ),
     );
