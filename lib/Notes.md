@@ -7,5 +7,8 @@ uma breve descrisao sobre o produto, alem de um botao aonde eu posso colocar um 
 
 3- Colocar umas descrições melhores e ajustar erros de caligrafia e acentuação do projeto
 
+4- Mexer no carrinho de compras 
+
+
 
 

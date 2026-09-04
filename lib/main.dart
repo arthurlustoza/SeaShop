@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/widgets/sea_shop_app_bar.dart';
 import 'package:flutter_application_1/widgets/sea_shop_body.dart';
 import 'package:flutter_application_1/widgets/sea_shop_drawer.dart';
+// ignore: unused_import
+import 'package:flutter_application_1/widgets/cart.dart';
 
 void main() {
   runApp(AppFull());

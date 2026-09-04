@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'cart.dart';
 
 class SeaShopAppBar extends StatelessWidget implements PreferredSizeWidget {
   const SeaShopAppBar({super.key});
@@ -23,6 +24,21 @@ class SeaShopAppBar extends StatelessWidget implements PreferredSizeWidget {
       centerTitle: false,
       titleSpacing: 0.0,
       backgroundColor: Colors.blue.shade200,
+
+      actions: [
+        IconButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Cartpage()),
+            );
+          },
+          icon: Icon(
+            Icons.shopping_bag_outlined,
+            color: Colors.black.withValues(alpha: 0.6),
+          ),
+        ),
+      ],
     );
   }
 

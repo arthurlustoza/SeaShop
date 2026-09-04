@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/widgets/my_profile.dart';
+import 'package:flutter_application_1/widgets/purchase_history.dart';
 
 class SeaShopDrawer extends StatefulWidget {
   const SeaShopDrawer({super.key});
@@ -29,15 +31,28 @@ class _SeaShopDrawerState extends State<SeaShopDrawer> {
           ListTile(
             title: const Text(
               'Seu perfil',
-              style: const TextStyle(fontFamily: 'serif'),
+              style: TextStyle(fontFamily: 'serif'),
             ),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const MyProfile()),
+              );
+            },
           ),
           ListTile(
             title: const Text(
-              'Item 2',
-              style: const TextStyle(fontFamily: 'serif'),
+              'histórico de compra',
+              style: TextStyle(fontFamily: 'serif'),
             ),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const PurchaseHistory(),
+                ),
+              );
+            },
           ),
         ],
       ),
