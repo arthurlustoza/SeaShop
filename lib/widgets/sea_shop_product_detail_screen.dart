@@ -45,6 +45,11 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final dynamic rawPrice = widget.product['price'];
+    final String formattedPrice = rawPrice is num
+        ? 'R\$ ${rawPrice.toStringAsFixed(2).replaceAll('.', ',')}'
+        : (rawPrice?.toString() ?? 'R\$ 0,00');
+
     // 1. Filtra produtos sugeridos
     final otherProducts = widget.allProducts
         .where((p) => p['title'] != widget.product['title'])
@@ -161,7 +166,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    widget.product['title'] ?? 'Sem título',
+                    widget.product['title'] ?? '',
                     style: const TextStyle(
                       fontSize: 28,
                       fontWeight: FontWeight.bold,
@@ -169,7 +174,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    widget.product['price'] ?? '',
+                    formattedPrice,
                     style: const TextStyle(
                       fontSize: 22,
                       color: Colors.green,
